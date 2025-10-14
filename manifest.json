@@ -30,6 +30,12 @@
                 "model": "gpt-4o-mini",
                 "temperature": 0.2
             },
+            "help": {
+                "title": "Como usar a função query",
+                "body": "Use esta função para fazer consultas ao modelo de linguagem da OpenAI. Você pode definir um comportamento opcional para o modelo e fornecer um prompt obrigatório com sua pergunta ou instrução.",
+                "footer": "",
+                "link": ""
+            },
             "params": [
                 {
                     "name": "comportamento",
@@ -65,6 +71,16 @@
             "script": "dist/agente.js",
             "description": "Agente que usa MCP para executar tarefas",
             "category": "ia",
+            "values": {
+                "tarefa": "Resuma o conteúdo do documento X e extraia as principais informações.",
+                "model": "gpt-4o-mini"
+            },
+            "help": {
+                "title": "Como usar a função agente",
+                "body": "Use esta função para executar tarefas complexas utilizando um agente baseado em MCP (Multi-Channel Processing). Forneça a tarefa que deseja que o agente realize, e opcionalmente, especifique a aplicação, função e argumentos que o agente deve usar.",
+                "footer": "",
+                "link": ""
+            },
             "params": [
                 {
                     "name": "tarefa",
