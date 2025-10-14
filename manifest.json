@@ -21,6 +21,7 @@
     },
     "functions": {
         "query": {
+            "name": "ChatGPT - OpenAI",
             "script": "dist/query.js",
             "description": "Executa uma consulta ao modelo (comportamento + prompt)",
             "category": "ia",
@@ -68,6 +69,7 @@
             ]
         },
         "agente": {
+            "name": "Agente com MCP - OpenAI",
             "script": "dist/agente.js",
             "description": "Agente que usa MCP para executar tarefas",
             "category": "ia",
