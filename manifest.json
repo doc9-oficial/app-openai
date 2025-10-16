@@ -55,10 +55,52 @@
                 },
                 {
                     "name": "model",
-                    "type": "string",
-                    "inputType": "text",
+                    "type": "text",
+                    "inputType": "select",
                     "required": false,
-                    "label": "Modelo (default: gpt-4o-mini)"
+                    "label": "Modelo (default: gpt-4o-mini)",
+                    "options": [
+                        {
+                            "label": "gpt-4o-mini",
+                            "value": "gpt-4o-mini"
+                        },
+                        {
+                            "label": "gpt-4",
+                            "value": "gpt-4"
+                        },
+                        {
+                            "label": "gpt-3.5-turbo",
+                            "value": "gpt-3.5-turbo"
+                        },
+                        {
+                            "label": "gpt-4-turbo",
+                            "value": "gpt-4-turbo"
+                        },
+                        {
+                            "label": "gpt-4o",
+                            "value": "gpt-4o"
+                        },
+                        {
+                            "label": "gpt-4o-mini",
+                            "value": "gpt-4o-mini"
+                        },
+                        {
+                            "label": "o4-mini-deep-research",
+                            "value": "o4-mini-deep-research"
+                        },
+                        {
+                            "label": "o3-deep-research",
+                            "value": "o3-deep-research"
+                        },
+                        {
+                            "label": "gpt-5-chat-latest",
+                            "value": "gpt-5-chat-latest"
+                        },
+                        {
+                            "label": "gpt-5-mini",
+                            "value": "gpt-5-mini"
+                        }
+                    ]
                 },
                 {
                     "name": "temperature",
@@ -116,10 +158,52 @@
                 },
                 {
                     "name": "model",
-                    "type": "string",
-                    "inputType": "text",
+                    "type": "text",
+                    "inputType": "select",
                     "required": false,
-                    "label": "Modelo (default: gpt-4o-mini)"
+                    "label": "Modelo (default: gpt-4o-mini)",
+                    "options": [
+                        {
+                            "label": "gpt-4o-mini",
+                            "value": "gpt-4o-mini"
+                        },
+                        {
+                            "label": "gpt-4",
+                            "value": "gpt-4"
+                        },
+                        {
+                            "label": "gpt-3.5-turbo",
+                            "value": "gpt-3.5-turbo"
+                        },
+                        {
+                            "label": "gpt-4-turbo",
+                            "value": "gpt-4-turbo"
+                        },
+                        {
+                            "label": "gpt-4o",
+                            "value": "gpt-4o"
+                        },
+                        {
+                            "label": "gpt-4o-mini",
+                            "value": "gpt-4o-mini"
+                        },
+                        {
+                            "label": "o4-mini-deep-research",
+                            "value": "o4-mini-deep-research"
+                        },
+                        {
+                            "label": "o3-deep-research",
+                            "value": "o3-deep-research"
+                        },
+                        {
+                            "label": "gpt-5-chat-latest",
+                            "value": "gpt-5-chat-latest"
+                        },
+                        {
+                            "label": "gpt-5-mini",
+                            "value": "gpt-5-mini"
+                        }
+                    ]
                 }
             ]
         }
