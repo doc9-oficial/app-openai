@@ -1,33 +1,52 @@
-name: Release
+name: Release Latest
 
 on:
   push:
     branches:
-      - main
+      - 'main'
 
 jobs:
-  update_latest_release:
+  build-and-package-latest:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout do código
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Criar ou atualizar tag 'latest'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git tag -f latest
-          git push origin -f latest
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
 
-      - name: Criar ou atualizar release 'latest'
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Prepare package folder
+        run: |
+          mkdir package
+          cp -r dist package/
+          cp -r node_modules package/
+          cp package.json package/
+          cp manifest.json package/
+          touch package/.ready
+
+      - name: Create zip archive
+        run: |
+          cd package
+          zip -r ../release.zip .
+
+      - name: Create or update GitHub Release 'latest'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: latest
           name: Latest Release
+          files: release.zip
           body: |
             Atualização automática da release **latest**
             Commit: ${{ github.sha }}
             Branch: ${{ github.ref_name }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
