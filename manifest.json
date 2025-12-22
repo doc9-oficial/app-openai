@@ -42,14 +42,14 @@
         {
           "name": "comportamento",
           "type": "string",
-          "inputType": "text",
+          "inputType": "textarea",
           "required": false,
           "label": "Instruções de comportamento do modelo (opcional)"
         },
         {
           "name": "prompt",
           "type": "string",
-          "inputType": "text",
+          "inputType": "textarea",
           "required": true,
           "label": "Prompt da consulta"
         },
