@@ -1,7 +1,9 @@
 {
   "name": "app-openai",
+  "displayName": "ChatGPT",
   "version": "1.0.0",
   "description": "IA via OpenAI: consulta e agente com MCP",
+  "icon": "BotMessageSquare",
   "auth": {
     "description": {
       "title": "Configuração da OpenAI",
